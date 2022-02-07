@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "default" {
   bucket = var.name
   versioning {
     enabled = var.versioning.enabled
-    mfa = var.versioning.mfa
+    mfa_delete = var.versioning.mfa_delete
   }
   logging {
     target_bucket = var.logging_bucket
