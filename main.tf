@@ -9,8 +9,11 @@ data "aws_region" "current" {}
 
 resource "aws_s3_bucket" "default" {
   bucket = var.name
-  versioning = var.versioning
-  logging = {
+  versioning {
+    enabled = var.versioning.enabled
+    mfa = var.versioning.mfa
+  }
+  logging {
     target_bucket = var.logging_bucket
     target_prefix = var.logging_bucket
   }
