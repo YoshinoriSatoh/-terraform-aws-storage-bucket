@@ -9,6 +9,11 @@ data "aws_region" "current" {}
 
 resource "aws_s3_bucket" "default" {
   bucket = var.name
+  versioning = var.versioning
+  logging = {
+    target_bucket = var.logging_bucket
+    target_prefix = var.logging_bucket
+  }
 
   server_side_encryption_configuration {
     rule {
