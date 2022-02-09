@@ -33,8 +33,11 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_in_development"></a> [in\_development](#input\_in\_development) | S3バケットにオブジェクトが残っていてもバケットごと強制削除されます | `bool` | `false` | no |
+| <a name="input_logging_bucket"></a> [logging\_bucket](#input\_logging\_bucket) | n/a | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
 | <a name="input_tf"></a> [tf](#input\_tf) | Terraformアプリケーション情報 | <pre>object({<br>    name          = string<br>    shortname     = string<br>    env           = string<br>    fullname      = string<br>    fullshortname = string<br>  })</pre> | n/a | yes |
+| <a name="input_versioning"></a> [versioning](#input\_versioning) | n/a | <pre>object({<br>    enabled = bool<br>    mfa_delete = bool<br>  })</pre> | <pre>{<br>  "enabled": true,<br>  "mfa_delete": false<br>}</pre> | no |
 
 ## Outputs
 

@@ -9,6 +9,8 @@ data "aws_region" "current" {}
 
 resource "aws_s3_bucket" "default" {
   bucket = var.name
+  force_destroy = var.in_development
+
   versioning {
     enabled = var.versioning.enabled
     mfa_delete = var.versioning.mfa_delete
