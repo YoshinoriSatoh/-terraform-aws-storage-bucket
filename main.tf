@@ -8,11 +8,11 @@ data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 
 resource "aws_s3_bucket" "default" {
-  bucket = var.name
+  bucket        = var.name
   force_destroy = var.in_development
 
   versioning {
-    enabled = var.versioning.enabled
+    enabled    = var.versioning.enabled
     mfa_delete = var.versioning.mfa_delete
   }
   logging {

@@ -11,8 +11,8 @@ variable "tf" {
 
 variable "in_development" {
   description = "S3バケットにオブジェクトが残っていてもバケットごと強制削除されます"
-  type = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 variable "name" {
@@ -21,11 +21,11 @@ variable "name" {
 
 variable "versioning" {
   type = object({
-    enabled = bool
+    enabled    = bool
     mfa_delete = bool
   })
   default = {
-    enabled = true
+    enabled    = true
     mfa_delete = false
   }
 }
