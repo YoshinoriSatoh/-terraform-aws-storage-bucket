@@ -43,7 +43,7 @@ resource "aws_s3_bucket_versioning" "default" {
   bucket = aws_s3_bucket.default.id
 
   versioning_configuration {
-    enabled    = var.versioning.enabled
+    status     = var.versioning.enabled
     mfa_delete = var.versioning.mfa_delete
   }
 }

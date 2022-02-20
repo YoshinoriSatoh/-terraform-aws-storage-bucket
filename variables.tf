@@ -21,11 +21,11 @@ variable "name" {
 
 variable "versioning" {
   type = object({
-    enabled    = bool
+    enabled    = string
     mfa_delete = bool
   })
   default = {
-    enabled    = true
+    enabled    = "Enabled"
     mfa_delete = false
   }
 }
